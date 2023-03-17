@@ -40,6 +40,7 @@ function playGame(pick){
 
     //Logic
     if(final == cpuPick){
+        document.querySelectorAll("h2")[1].style.color = "black";
         document.querySelectorAll("h2")[1].innerHTML = "Draw!";
         drawCount++;
     }
