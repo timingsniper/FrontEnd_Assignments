@@ -3,8 +3,28 @@ var winCount = 0;
 var drawCount = 0;
 var lossCount = 0;
 
-for (var i = 0; i < 3; i++){
-    document.querySelectorAll(".btn")[i].addEventListener("click", function() {
+const scheme = document.querySelectorAll("h2")[0];
+const rainbow = [
+    "#9400D3",
+    "#4B0082",
+    "#0000FF",
+    "#00FF00",
+    "#FFFF00",
+    "#FF7F00",
+    "#FF0000",
+];
+var currentColor = 0;
+setInterval(() => {
+    scheme.style.color = `${rainbow[currentColor]}`;
+    scheme.style.borderColor = `${rainbow[currentColor]}`;
+    currentColor++;
+    if (currentColor == rainbow.length - 1) {
+        currentColor = 0;
+    }
+}, 100);
+
+for (var i = 0; i < 3; i++) {
+    document.querySelectorAll(".btn")[i].addEventListener("click", function () {
         var btnInner = this.innerHTML;
         playGame(btnInner);
         //alert(btnInner);
@@ -12,11 +32,11 @@ for (var i = 0; i < 3; i++){
     })
 }
 
-function playGame(pick){
+function playGame(pick) {
     var final = 0; //Player's pick
-    
+
     //Numerize the player's pick
-    switch(pick){
+    switch (pick) {
         case "rock":
             final = "1";
             break;
@@ -27,29 +47,29 @@ function playGame(pick){
             final = "3";
             break;
     }
-    
+
     //Set player's pick image
     var randomPickImg = "images/" + final + ".png";
     //alert(final);
     document.querySelectorAll("img")[0].setAttribute("src", randomPickImg);
 
     //Set CPU's pick image
-    var cpuPick = Math.floor(Math.random()*3) + 1;
+    var cpuPick = Math.floor(Math.random() * 3) + 1;
     var randomPickImg = "images/" + cpuPick + ".png";
     document.querySelectorAll("img")[1].setAttribute("src", randomPickImg);
 
     //Logic
-    if(final == cpuPick){
+    if (final == cpuPick) {
         document.querySelectorAll("h2")[1].style.color = "black";
         document.querySelectorAll("h2")[1].innerHTML = "Draw!";
         drawCount++;
     }
-    else if((final == "1" && cpuPick == "2") || (final == "2" && cpuPick == "3") || (final == "3" & cpuPick == "1")){
+    else if ((final == "1" && cpuPick == "2") || (final == "2" && cpuPick == "3") || (final == "3" & cpuPick == "1")) {
         document.querySelectorAll("h2")[1].style.color = "blue";
         document.querySelectorAll("h2")[1].innerHTML = "You Win!!!";
         winCount++;
     }
-    else{
+    else {
         document.querySelectorAll("h2")[1].style.color = "red";
         document.querySelectorAll("h2")[1].innerHTML = "You Lose...";
         lossCount++;
@@ -59,6 +79,3 @@ function playGame(pick){
     document.querySelector("h3").innerHTML = winCount + " Wins," + drawCount + " Draws," + lossCount + " Losses";
 
 }
-
-
-
