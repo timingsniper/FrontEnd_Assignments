@@ -1,0 +1,81 @@
+/*1800094804 张晙优 作业1*/
+
+/*div styles*/
+.titleDiv {
+    border-bottom-style: dotted;
+}
+
+.titleDiv:hover {
+    border-color: yellowgreen;
+}
+
+.eduDiv {
+    border-bottom-style: solid;
+}
+
+.eduDiv:hover {
+    border-color: yellowgreen;
+}
+
+.projectDiv {
+    border-bottom-style: solid;
+}
+
+.projectDiv:hover {
+    border-color: yellowgreen;
+}
+
+/*tag styles*/
+body {
+    background-color: #DEFCF9;
+}
+
+img {
+    width: 150px;
+    height: 200px;
+}
+
+h2 {
+    font-family: "Verdana", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #3C84AB;
+}
+
+h2:hover {
+    color: #362FD9
+}
+
+h3 {
+    font-family: "SimSun", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3C84AB;
+}
+
+h3:hover {
+    color: #5e5ba5
+}
+
+td {
+    padding: 6px
+}
+
+/*class styles*/
+.neirong {
+    font-family: "FangSong", sans-serif;
+    font-size: 18px;
+}
+
+.englishFont {
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+}
+
+.emoji::before {
+    content: "🔥";
+}
+
+.emoji::after {
+    content: "🔥";
+}
