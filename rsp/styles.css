@@ -1,0 +1,91 @@
+/*1800094804 张晙优*/
+
+body{
+    background-color: #FDFDFD;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    font-size: 40px;
+}
+
+.tt {
+    margin: auto;
+    height: 20%;
+    text-align: center;
+    
+}
+
+.texts {
+    text-align: center;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+}
+
+.selector {
+    background-color: #A1EAFB;
+    margin:auto;
+    width: 50%;
+    margin-top: 20px;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: #A1EAFB; 
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+}
+
+.play {
+    background-color: #CABBE9;
+    border-color: #CABBE9;
+}
+
+.rock {
+    background-image: url("images/1.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
+    font-size: 0px;
+}
+
+.sci {
+    background-image: url("images/2.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
+    font-size: 0px;
+}
+
+.paper {
+    background-image: url("images/3.png");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    font-size: 0px;
+}
+
+.btn {
+    outline: none;
+    text-align: center;
+    display: inline-block;
+    border: 5px solid;
+    border-radius: 25px;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+.pick { 
+    width: 50%;
+}
+
